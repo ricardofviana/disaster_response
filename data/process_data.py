@@ -1,16 +1,48 @@
 import sys
+import pandas as pd
+from sqlalchemy import create_engine
 
 
 def load_data(messages_filepath, categories_filepath):
-    pass
+    """[summary]
+
+    Args:
+        messages_filepath (string): A path to messages csv file
+        categories_filepath (string): A path to categories csv file
+
+    Returns:
+        Pandas Dataframe: Merge both files into a singles Dataframee
+    """
+    messages = pd.read_csv(messages_filepath)
+    categories = pd.read_csv(categories_filepath)
+    df = messages.merge(categories, on='id')
+    return df
 
 
 def clean_data(df):
-    pass
+    """
+    Clean Data split categories into columns, replace value to 0 or 1, remove duplicates,
+    replace strange values
+    """
+    categories = df['categories'].str.split(';', expand= True)
+    row = categories.iloc[0]
+    category_colnames = row.str.split('-', expand= True)[0].tolist()
+    categories.columns = category_colnames
+    for column in categories:
+    # set each value to be the last character of the string
+    categories[column] = categories[column].str.split('-', expand= True)[1]
+    # convert column from string to numeric
+    categories[column] = categories[column].astype(int)
+    categories= categories.replace(2,1)
+    df.drop('categories', axis= 1, inplace= True)
+    df = pd.concat([df,categories], axis= 1)
+    df.drop_duplicates(inplace= True)
+    return df
 
 
 def save_data(df, database_filename):
-    pass  
+    engine = create_engine('sqlite:////'+database_filename)
+    df.to_sql('Disaster', engine, index=False, if_exists='replace')
 
 
 def main():
