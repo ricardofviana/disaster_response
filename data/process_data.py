@@ -30,9 +30,9 @@ def clean_data(df):
     categories.columns = category_colnames
     for column in categories:
     # set each value to be the last character of the string
-    categories[column] = categories[column].str.split('-', expand= True)[1]
+        categories[column] = categories[column].str.split('-', expand= True)[1]
     # convert column from string to numeric
-    categories[column] = categories[column].astype(int)
+        categories[column] = categories[column].astype(int)
     categories= categories.replace(2,1)
     df.drop('categories', axis= 1, inplace= True)
     df = pd.concat([df,categories], axis= 1)
@@ -41,7 +41,7 @@ def clean_data(df):
 
 
 def save_data(df, database_filename):
-    engine = create_engine('sqlite:////'+database_filename)
+    engine = create_engine('sqlite:///'+database_filename)
     df.to_sql('Disaster', engine, index=False, if_exists='replace')
 
 
