@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 
 
 def load_data(messages_filepath, categories_filepath):
-    """[summary]
+    """Read two csv file path and merge those into one.
 
     Args:
         messages_filepath (string): A path to messages csv file
@@ -41,6 +41,7 @@ def clean_data(df):
 
 
 def save_data(df, database_filename):
+    """Save the dataframe in a database"""
     engine = create_engine('sqlite:///'+database_filename)
     df.to_sql('Disaster', engine, index=False, if_exists='replace')
 
