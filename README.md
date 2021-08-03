@@ -26,5 +26,5 @@ git clone  https://github.com/ricardofviana/disaster_response.git
 
 # Acknowledgements
 
-- Udacity for providing such a complete Data Science Nanodegree Program
+- Udacity the scripts were based on the Data Science Nanodegree program
 - Figure Eight for providing messages dataset to train my model
