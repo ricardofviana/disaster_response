@@ -1,6 +1,10 @@
 # disaster_response
 Udacity Data Enginnering Project for Data Science Nano Degree track.
 
+
+![appication screenshot](/images/disaster_response_app1.PNG)
+
+
 # Description
 This project it's focused on helping disaster response organizations. 
 When a disaster occurs, people send millions and millions of communications from various sources, either direct or social media. Often it is only one in every thousand messages that might be relevant to disaster response professionals. One organization will take care of water, another will care about blocked roads, another may care about medical supplies. The way that disasters are typically responded to, is that different oranizations will take of different approaches.
@@ -38,3 +42,10 @@ git clone  https://github.com/ricardofviana/disaster_response.git
 
 - Udacity the scripts were based on the Data Science Nanodegree program
 - Figure Eight for providing messages dataset
+
+# Screeshots
+![graph1](/images/disaster_response_app2.PNG)
+![graph2](/images/disaster_response_app3.PNG)
+
+## Application Categorizing your message
+![app_screeshot](/images/disaster_response_app4.PNG)
