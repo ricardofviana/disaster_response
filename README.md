@@ -12,6 +12,16 @@ So we gona use some neural language processing (NLP) with machine learning model
 ![image](https://user-images.githubusercontent.com/48634609/127741798-7fd305b4-9e80-4530-b8bf-66ef03a8dbed.png)
 
 ## Getting Started
+### Dependencies
+    *  Flask == 2.0.1
+    *  SQLAlchemy == 1.4.20
+    *  joblib == 1.0.1
+    *  nltk == 3.6.2
+    *  pandas == 1.3.0
+    *  plotly == 5.1.0
+    *  sklearn == 0.0
+    
+   
 Clone this repository:
 
 ``` Bash
