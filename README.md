@@ -44,8 +44,12 @@ git clone  https://github.com/ricardofviana/disaster_response.git
 - Figure Eight for providing messages dataset
 
 # Screeshots
+### Application Categorizing your message
+![app_screeshot](/images/disaster_response_app4.PNG)
+
+
 ![graph1](/images/disaster_response_app2.PNG)
+
 ![graph2](/images/disaster_response_app3.PNG)
 
-## Application Categorizing your message
-![app_screeshot](/images/disaster_response_app4.PNG)
+
